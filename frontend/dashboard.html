@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - To-Do : Tracker</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <nav class="navbar">
+            <div class="nav-brand">To-Do : Tracker</div>
+            <div class="nav-user">
+                <span id="username-display"></span>
+                <button id="logoutBtn" class="btn btn-logout">Logout</button>
+            </div>
+        </nav>
+        
+        <main class="dashboard-main">
+            <div class="progress-section">
+                <h2>Your Progress</h2>
+                <div class="progress-container">
+                    <div class="progress-bar" id="progressBar"></div>
+                </div>
+                <p class="progress-text" id="progressText">0% Complete</p>
+            </div>
+            
+            <div class="task-input-section">
+                <h2>Add New Task</h2>
+                <form id="taskForm">
+                    <div class="task-form-row">
+                        <input type="text" id="taskTitle" placeholder="Task title..." required>
+                        <select id="taskPriority">
+                            <option value="low">Low Priority</option>
+                            <option value="medium" selected>Medium Priority</option>
+                            <option value="high">High Priority</option>
+                        </select>
+                        <button type="submit" class="btn btn-add">Add Task</button>
+                    </div>
+                    <input type="text" id="taskDescription" placeholder="Description (optional)...">
+                    <input type="date" id="taskDueDate" placeholder="Due date (optional)">
+                </form>
+            </div>
+            
+            <div class="tasks-section">
+                <div class="tasks-header">
+                    <h2>Your Tasks</h2>
+                    <div class="filter-buttons">
+                        <button class="filter-btn active" data-filter="all">All</button>
+                        <button class="filter-btn" data-filter="active">Active</button>
+                        <button class="filter-btn" data-filter="completed">Completed</button>
+                    </div>
+                </div>
+                <div id="tasksList" class="tasks-list">
+                    <!-- Tasks will be loaded here -->
+                </div>
+            </div>
+        </main>
+        
+        <footer>
+            <p>Made by Dev Shanbuag</p>
+        </footer>
+    </div>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>
